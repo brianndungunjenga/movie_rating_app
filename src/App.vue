@@ -3,6 +3,7 @@
 
     <v-navigation-drawer
 
+
       permanent
       v-model="drawer"
       app
@@ -27,8 +28,12 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar app color="indigo" dark fixed >
-      <v-app-bar-nav-icon ></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>Home</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn text v-bind:to="{name: 'AddMovie' }">Add Movie</v-btn>
+      </v-toolbar-items>
     </v-app-bar>
     <v-content>
       <v-container fluid>
