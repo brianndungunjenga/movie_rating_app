@@ -80,11 +80,11 @@ export default {
           },
         })
           .then(() => {
-            this.$swal (
+            this.$swal(
               'Great!',
               'Movie added successfully!',
               'success',
-            )
+            );
             this.$router.push({ name: 'home' });
             this.$refs.form.reset();
           })
