@@ -31,7 +31,7 @@ module.exports.controller = (app) => {
       movie_id: req.params.id,
       user_id: req.body.user_id,
       rate: req.body.rate,
-    })
+    });
 
     rating.save((error, ratingstar) => {
       if (error) { console.log(error); }
