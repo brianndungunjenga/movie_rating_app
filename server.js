@@ -5,13 +5,13 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const morgan = require('morgan');
 const fs = require('fs');
-const path = require('path')
+const path = require('path');
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
 const passportJWT = require('passport-jwt');
 const ExtractJwt = passportJWT.ExtractJwt;
 const JwtStrategy = passportJWT.Strategy;
-const jwtOptions = {}
+const jwtOptions = {};
 jwtOptions.jwtFromRequest = ExtractJwt.fromAuthHeaderWithScheme('jwt');
 jwtOptions.secretOrKey = 'movieratingapplicationsecretkey';
 

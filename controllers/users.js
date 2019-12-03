@@ -15,7 +15,9 @@ module.exports.container = (app) => {
     });
     User.createUser(newUser, (error, user) => {
       if (error) {
-        console.log(error);
+        response.status(422).json({
+          message: 'Something went wrong/. Please try again after some time!',
+        });
       }
       response.send({ user });
     });
